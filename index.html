@@ -25,12 +25,29 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
+   <style type="text/css">
+        .modal .modal-body {
+                max-height: 420px;
+                overflow-y: auto;
+        }
+        .section-heading {
+            font-size: 350%;
+        }
+        p {
+            font-size: 150%;
+
+        }
+   </style>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+   
+
 
 </head>
 
@@ -56,14 +73,14 @@
                         <a class="page-scroll" href="#about">Sobre</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#example">Exemplos</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#desenvolvedores">Desenvolvedores</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -77,31 +94,126 @@
                 <h1>Toca pro Pai</h1>
                 <hr>
                 <p>
+                    Evolução sentimental das músicas internacionais do brasil.
                 	<ul style="list-style: none;font-size:150%">
-                		<li>Quais temas de músicas eram mais frequentes antigamente ?</li> 
-               			<li>Será que a internet teve alguma influência nessa mudança ? </li>
-               			<li>Essas e outras perguntas é o que vamos tentar responder aqui...</li>
+                		
 					</ul>
                	</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Descubra</a>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">#Descubra</a>
             </div>
         </div>
     </header>
 
     <section class="bg-primary" id="about">
         <div class="container">
-            <div class="row">
+            <div class="row" >
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
+                    
+
+                    <h2 class="section-heading">Fonte dos dados</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#" class="btn btn-default btn-xl">Get Started!</a>
+                    <p class="text-faded">
+                        <ul>
+                            <li style="font-size:150%;">    Dados relativos ás 100 músicas mais tocadas nas radios brasileiras de 1958 a 2014.
+                            </li style="font-size:150%;">
+                             <li style="font-size:150%;">    Dados das letras das músicas vinda do site <a href="www.cifraclub.com.br/" style="color:white;">cifras.com</a>.
+                            </li>
+                            <li style="font-size:150%;">Só utilizamos dados de músicas da lingua inglesa.</li>
+                        </ul>
+                    </p>
+
+                     <h2 class="section-heading">Análise de Sentimento</h2>
+                    <hr class="light">
+                    <p class="text-faded">
+                        Análise de Sentimento refere-se ao processo de utilizar ferramentas computacionais para identificar e extrair informacões subjetivas de conteúdos textuais.
+                        
+                    </p>
+
+                    <h2 class="section-heading">O que é polaridade ?</h2>
+                    <hr class="light">
+                    <p class="text-faded">O quão positivo ou negativo é uma música.</p>
+
+
+                    <h2 class="section-heading">Distribuição das polaridades.</h2>
+                    <hr class="light">
+
+                    <!-- Font dos dados/ Como foi processado / Analise de Sentimento /  -->
+                    <div id="distribution_graph" style="min-width: 310px; height: 400px; margin: 0 auto">
+                        <img src="img/densidade.png" height="100%" width="100%">
+
+                    </div>
+
+                    <br>
+
+                    <h2 class="section-heading">Soma das polaridades por ano</h2>
+                    <hr class="light">
+                    <div id="line_graph" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                    
+                    <br>
+
+                   
+
+                     <h2 class="section-heading"> Polaridade média das músicas por anos</h2>
+                    <hr class="light">
+                    <div id="stack_graph" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+                    
+
+                    <!-- <a href="#" class="btn btn-default btn-xl">Get Started!</a> -->
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services">
+    <section id="example">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Exemplos</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <!-- <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i> -->
+                        <h3>Positiva</h3>
+                        <a data-toggle="modal" data-target="#justin_lyrics"><h4 class="text-muted">Justin Bieber - U Smile</h4></a>
+                        <iframe width="420" height="345"
+                            src="http://www.youtube.com/embed/r2ozuCXpVJY">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <h3>Negativa</h3>
+                        <a data-toggle="modal" data-target="#taylor_lyrics"><h4 class="text-muted"> Taylor Swift - Shake It Off</h4></a>
+                         <iframe width="420" height="345"
+                            src="http://www.youtube.com/embed/nfWlot6h_JM">
+                        </iframe>
+                    </div>
+                </div>
+               <!--  <div class="col-lg-4 col-md-8 text-center">
+                    <div class="service-box">
+                        <img src="img/arthur.jpg" style = "border-radius:25px; "  height="35%" width="29%">
+                        <h3>Arthur Sena</h3>
+                        <p class="text-muted">UFCG/Computação Graduando - Laboratório Analytics</p>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Made with Love</h3>
+                        <p class="text-muted">You have to make your websites with love these days!</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="desenvolvedores">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -112,25 +224,25 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-8 text-center">
-                    <div class="service-box">
+                <div class="col-lg-4 col-md-8 text-center" >
+                    <div class="service-box" style="border:2px solid white;background-color:white;border-radius:25px;">
                         <!-- <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i> -->
                        	<img src="img/matheus.jpg" style = "border-radius:25px;" height="35%" width="35%">
-                        <h3>Allan Sales</h3>
+                        <h3 style="color:black;">Matheus Maciel</h3>
                         <p class="text-muted">UFCG/Computação Mestrando - Laboratório Analytics</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8 text-center">
-                    <div class="service-box">
+                    <div class="service-box" style="border:2px solid white;background-color:white;border-radius:25px;">
                         <img src="img/allan.jpg" style = "border-radius:25px;" height="35%" width="35%">
-                        <h3>Allan Sales</h3>
+                        <h3 style="color:black;">Allan Sales</h3>
                         <p class="text-muted">UFCG/Computação Mestrando - Laboratório Analytics</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8 text-center">
-                    <div class="service-box">
+                    <div class="service-box" style="border:2px solid white;background-color:white;border-radius:25px;">
                         <img src="img/arthur.jpg" style = "border-radius:25px; "  height="35%" width="29%">
-                        <h3>Arthur Sena</h3>
+                        <h3 style="color:black;">Arthur Sena</h3>
                         <p class="text-muted">UFCG/Computação Graduando - Laboratório Analytics</p>
                     </div>
                 </div>
@@ -145,7 +257,42 @@
         </div>
     </section>
 
-    <section class="no-padding" id="portfolio">
+    <!-- Modal -->
+  <div class="modal fade" id="justin_lyrics" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Justin Bieber - U Smile</h4>
+        </div>
+        <div class="modal-body">
+          <p><span>I wait on you</span><br><span>Forever, any day</span><br><span>Hand and foot</span><br><span>Your world is my world, yeah</span><br></p><p><span>Ain't no way</span><br><span>You ever gonna get</span><br><span>Any less than you should</span><br><span>Cause, baby</span><br></p><p><span>You smile, I smile (oh)</span><br><span>Cause whenever</span><br><span>You smile, I smile</span><br><span>Hey, hey, hey</span><br></p><p><span>Your lips, my biggest weakness</span><br><span>Shouldn't I let you know</span><br><span>I'm always gonna do what they say (hey)</span><br></p><p><span>If you need me</span><br><span>I'll come running</span><br><span>From a thousand miles away</span><br></p><p><span>When you smile, I smile</span><br><span>(Oh, whoa)</span><br><span>You smile, I smile</span><br><span>Hey</span><br></p><p><span>Baby take my open heart</span><br><span>And all it offers</span><br><span>Cause this is as</span><br><span>unconditional as it'll</span><br><span>ever get You ain't</span><br><span>seen nothing yet,</span><br><span>I won't ever hesitate</span><br><span>to give you more</span><br></p><p><span>Cause baby (hey)</span><br><span>You smile, I smile</span><br><span>(Whoa)</span><br><span>You smile, I smile</span><br><span>Hey, hey, hey</span><br></p><p><span>You smile, I smile</span><br><span>I smile, I smile, I smile</span><br><span>You smile, I smile</span><br><span>Make me smile, baby</span><br></p><p><span>Baby you won't ever walk for nothing</span><br><span>You are my INs and my means now</span><br><span>With you there's no in between</span><br><span>I'm all in</span><br></p><p><span>Cause my cards are on the table</span><br><span>And I'm willing and I'm able</span><br><span>But I fold to your wish</span><br><span>Cause it's my command</span><br></p><p><span>Hey, hey, hey</span><br></p><p><span>You smile, I smile</span><br><span>(Whoa)</span><br><span>You smile, I smile</span><br><span>Hey, hey, hey</span><br></p><p><span>You smile, I smile</span><br><span>I smile, I smile, I smile</span><br><span>You smile, I smile</span><br></p><p><span>You smile, I smile</span><br><span>You smile, I smile</span><br></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="taylor_lyrics" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Taylor Swift - Shake It Off</h4>
+        </div>
+        <div class="modal-body">
+          <p>I stay out too late<br>Got nothing in my brain<br>That's what people say, hmm, hmm<br>That's what people say, hmm, hmm</p><p>I go on too many dates<br>But I can't make them stay<br>At least that's what people say, hmm, hmm<br>That's what people say, hmm, hmm</p><p>But I keep cruising<br>Can't stop, won't stop moving<br>It's like I got this music in my mind<br>Sayin' it's gonna be alright</p><p>'Cause the players gonna play, play, play, play, play<br>And the haters gonna hate, hate, hate, hate, hate<br>Baby, I'm just gonna shake, shake, shake, shake, shake<br>I shake it off, I shake it off</p><p>Heartbreakers gonna break, break, break, break, break<br>And the fakers gonna fake, fake, fake, fake, fake<br>Baby, I'm just gonna shake, shake, shake, shake, shake<br>I shake it off, I shake it off, uh, uh, uh</p><p>I'll never miss a beat<br>I'm lightning on my feet<br>And that's what they don't see, hmm, hmm<br>That's what they don't see, hmm, hmm<br>I'm dancing on my own<br>I'll make the moves up as I go<br>And that's what they don't know, hmm, hmm<br>That's what they don't know, hmm, hmm</p><p>But I keep cruising<br>Can't stop, won't stop grooving<br>It's like I got this music in my mind<br>Sayin' it's gonna be alright</p><p>'Cause the players gonna play, play, play, play, play<br>And the haters gonna hate, hate, hate, hate, hate<br>Baby, I'm just gonna shake, shake, shake, shake, shake<br>I shake it off, I shake it off, uh, uh, uh</p><p>Heartbreakers gonna break, break, break, break, break<br>And the fakers gonna fake, fake, fake, fake, fake<br>Baby, I'm just gonna shake, shake, shake, shake, shake<br>I shake it off, I shake it off, uh, uh, uh</p><p>I, I, I shake it off, I shake it off<br>I, I, I shake it off, I shake it off<br>I, I, I shake it off, I shake it off<br>I, I, I shake it off, I shake it off, uh, uh, uh</p><p>Hey, hey, hey<br>Just think while you been getting down and out about the liars<br>And the dirty dirty cheats of the world<br>You could have been getting down to this sick beat</p><p>My ex-man brought his new girlfriend<br>She's like, "Oh, my God"<br>But I'm just gonna shake it<br>And to the fella over there with the hella good hair<br>Won't you come on over, baby, we can shake, shake, shake</p><p>(Yeah, oh) 'cause the players gonna play, play, play, play, play<br>And the haters gonna hate, hate, hate, hate, hate<br>Baby, I'm just gonna shake, shake, shake, shake, shake<br>I shake it off, I shake it off</p><p>Heartbreakers gonna break, break, break, break, break<br>And the fakers gonna fake, fake, fake, fake, fake<br>Baby, I'm just gonna shake, shake, shake, shake, shake<br>I shake it off, I shake it off, uh, uh, uh</p><p>Shake it off, shake it off<br>I, I, I shake it off, I shake it off<br>I, I, I shake it off, I shake it off<br>I, I, I shake it off, I shake it off, uh, uh, uh</p><p>Shake it off, shake it off<br>I, I, I shake it off, I shake it off<br>I, I, I shake it off, I shake it off<br>I, I, I shake it off, I shake it off, uh, uh, uh</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
@@ -269,7 +416,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -285,6 +432,117 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
 
+     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <script type="text/javascript">
+        // Data gathered from http://populationpyramid.net/germany/2015/
+            $(function () {
+                // Age categories
+                var categories = ["1972","1973","1974","1975","1976","1977","1978","1979","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014"];
+                $(document).ready(function () {
+                    $('#stack_graph').highcharts({
+                        chart: {
+                            type: 'bar'
+                        },
+                        title: {
+                            text: ''
+                        },
+                       
+                        xAxis: [{
+                            categories: categories,
+                            reversed: false,
+                            labels: {
+                                step: 1
+                            }
+                        }, { // mirror axis on right side
+                            opposite: true,
+                            reversed: false,
+                            categories: categories,
+                            linkedTo: 0,
+                            labels: {
+                                step: 2
+                            }
+                        }],
+                        yAxis: {
+                            title: {
+                                text: null
+                            },
+                            labels: {
+                                formatter: function () {
+                                    return Math.abs(this.value) ;
+                                }
+                            }
+                            
+                        },
+
+                        plotOptions: {
+                            series: {
+                                stacking: 'normal'
+                            }
+                        },
+
+                        tooltip: {
+                            formatter: function () {
+                                return "<b>Ano: </b>" + this.point.category + '</b><br/>' +
+                                    'Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 2);
+                            }
+                        },
+
+                        series: [{
+                            name: 'Positivo',
+                            data: [ 2.0637, 4.1992, 2.8811,      0, 1.8737, 3.4338, 4.0171, 2.2755, 1.8091, 0.25324, 1.0469, 0.73544, 3.9697, 4.1669,      0, 0.90996, 0.84778, 1.3218, 3.1633,  5.379, 2.3193, 3.9768, 1.4437,      0, 2.5979, 0.2836, 2.3488, 4.9478, 0.056615,  1.809, 1.0549, 2.0639, 2.0012, 1.7495, 3.1293, 1.2215, 4.8057, 2.6035, 2.4742, 3.3443]
+                        }, {
+                            name: 'Negativo',
+                            data: [-3.6874, -2.2771, -0.19103, -0.1385, -1.7244, -0.043122, -4.5084, -7.9048, -1.9644, -0.36781,      0, -3.4103, -2.7619, -2.1924, -1.9749, -1.696, -1.992, -2.9041, -2.3697, -1.9071, -1.2978, -1.8824, -0.72591, -0.13654, -1.6404, -0.31202, -4.0348, -2.5673, -1.0112, -4.1795, -1.3397,      0, -2.4304, -1.7016, -0.78102, -0.37796, -0.95744, -1.3231, -3.5835, -11.466]
+                        }]
+                    });
+                });
+
+            });
+
+    </script>
+
+    <script type="text/javascript">
+                     $(function () {
+    $('#line_graph').highcharts({
+        title: {
+            text: "",
+            x: -20 //center
+        },
+        xAxis: {
+            categories: ["1972","1973","1974","1975","1976","1977","1978","1979","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014"]
+        },
+        yAxis: {
+            title: {
+                text: 'Polaridade'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            // valueSuffix: '°C'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Polaridade',
+            data: [6.63138192 ,12.24249836 ,5.38004934 ,-0.13849824 ,2.02306642 ,6.82441599 ,7.54284495 ,-1.07826919 ,-0.15525280 ,0.13866482 ,2.09383885 ,-1.20393968 ,5.17750258 , ,1.75674716 ,-5.92479248 ,-4.17793012 ,-1.44066146 ,0.80075036 ,9.50082554 ,41.12503270 ,2.51235212 ,8.16567969 ,5.04889384 ,-0.27307594 ,13.26387428 ,-0.02842282 ,-0.36023962 ,2.00722230 ,-0.95461419 ,-13.66153869 ,-1.90938842 ,12.38327768 ,2.71463434 ,-1.41392896 ,17.99504229 , ,2.06512756 ,40.37922051 ,16.85854307 ,0.51146839 ,-15.76393205
+]
+        }]
+    });
+});
+
+    </script>
+
+    
 </body>
 
 </html>
